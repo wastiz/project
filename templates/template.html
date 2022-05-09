@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+    <div class="flex-container">
+        <header>
+            <a class="logo" href="">SCH</a>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="helpRu.html">Поддержка</a>
+                <a href="articleRu.html">Статьи</a>
+                <a href="aboutusRu.html">Онас</a>
+                <a href="indexEng.html">En</a>
+                <a href="index.html">Ru</a>
+            </nav>
+            <div class="reg_div">
+                <a class="sign_a" href="">
+                    <div class="sign_div">Войти</div>
+                </a>
+                <a class="login_a" href="">
+                    <div class="login_div">Создать</div>
+                </a>
+            </div>
+        </header>
+        <main>
+            <aside></aside>
+            <section>{% block section %}{% endblock %}</section>
+            <aside></aside>
+        </main>
+        <footer></footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
