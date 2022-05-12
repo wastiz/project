@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Верстка</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,54 +15,57 @@
 </head>
 
 <body>
-    <header>
-        <a class="logo" href="">SCH</a>
-        <nav>
-            <a href="index.html">Главная</a>
-            <a href="helpRu.html">Поддержка</a>
-            <a href="articleRu.html">Статьи</a>
-            <a href="aboutusRu.html">Онас</a>
-            <a href="indexEng.html">En</a>
-            <a href="index.html">Ru</a>
-        </nav>
-        <div class="reg_div">
-            <a class="sign_a" href="">
-                <div class="sign_div">Войти</div>
-            </a>
-            <a class="login_a" href="">
-                <div class="login_div">Создать</div>
-            </a>
-        </div>
-    </header>
-    <main>
+    <div class="flex-container">
+        <header class="flex-item item-1">
+            <a class="logo" href="">SCH</a>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="helpRu.html">Поддержка</a>
+                <a href="articleRu.html">Статьи</a>
+                <a href="aboutusRu.html">Онас</a>
+                <a href="indexEng.html">En</a>
+                <a href="index.html">Ru</a>
+            </nav>
+            <div class="reg_div">
+                <a class="sign_a" href="">
+                    <div class="sign_div">Войти</div>
+                </a>
+                <a class="login_a" href="">
+                    <div class="login_div">Создать</div>
+                </a>
+            </div>
+        </header>
         <div class="head">
             <div class="notion">
                 <h1 class="liner">
                     Давно хотели начать делать сайты? Не знаете, с чего начать? Тогда этот сайт
-                    специально для вас. В данном сайте мы собрали список программ для
-                    начинающих создателей сайтов, более того прикрепили ссылки на курсы по
-                    этим программам, а так же ссылки на официальные сайты, что бы вы не
+                    специально для вас. В данном портале мы собрали список программ для
+                    начинающих создателей сайтов, более того, прикрепили ссылки на курсы по
+                    этим программам, а так же ссылки на официальные сайты, чтобы вы не
                     тратили время на поиск.
                 </h1>
                 <hr>
                 <h1 class="PS">
-                    Данный сайт создан как проектная работа, так что возможны некоторые недоработки, в случае <br>
+                    Данный сайт создан как проектная работа, так что возможны некоторые недоработки, в случае
+                    <br>
                     таковых вы всегда можете связаться с нами через чат сайта или же написать на Gmail.
                 </h1>
             </div>
             <img class="head_img" src="img/image1.png" alt="no image">
         </div>
-        <div class="navigation">
-            <a href="articleRu.html">Начало</a>
-            /
-            <a href="designRu.html">Дизайн</a>
-            /
-            <a href="codingRu.html">Верстка</a>
-            /
-            <a href="applicationRu.html">Программы</a>
-        </div>
-        <div class="main">
-            <div class="article">
+        <main class="flex-item item-2">
+            <aside class="flex-item item-3"></aside>
+            <section class="flex-item item-4">
+                <div class="navigation">
+                    <a href="articleRu.html">Начало</a>
+                    /
+                    <a href="designRu.html">Дизайн</a>
+                    /
+                    <a href="codingRu.html">Верстка</a>
+                    /
+                    <a href="applicationRu.html">Программы</a>
+                </div>
+                <div class="article">
                     <p class="accent-text">Верстка сайта — это структурированное сочетание изображений, заголовков,
                         подзаголовков, таблиц, инфографик, текста и других элементов на странице c помощью языка
                         разметки HTML и языка описания внешнего вида страницы CSS.</p>
@@ -99,7 +102,8 @@
                     <p>Давайте рассмотрим, из чего состоит процесс верстки сайтов.</p>
                     <h2 id="Что_включает_в_себя_верстка_сайта">Что включает в себя верстка сайта</h2>
                     <p>Задачей верстальщика сайтов является написание кода, который трансформирует дизайн-макет (самый
-                        примитивный его вариант — набросок на бумаге) в считываемую браузером страничку, интерактивную для пользователя.
+                        примитивный его вариант — набросок на бумаге) в считываемую браузером страничку, интерактивную
+                        для пользователя.
                     </p>
                     <p>Важно знать, что в контексте создания сайтов в целом существует два вида программирования:</p>
                     <ul>
@@ -174,7 +178,7 @@
                                 data-src="https://www.spcdn.org/images/block-website-layout.png"
                                 alt="Схема блочной верстки сайта" width="1002" height="1190" style="display: block;">
                         </p>
-    
+
                     </figure>
                     <h3>Табличная верстка</h3>
                     <p>Это устаревший вид верстки, который, тем не менее, используют многие. Табличная верстка стояла у
@@ -276,7 +280,8 @@
                             (ctrl+shift+i) и просмотреть код страницы. Ошибки будут выделены красным цветом.</li>
                         <li><strong>Валидация HTML и CSS.</strong> Для этого нужно загрузить HTML- и СSS-код в
                             валидатор, например validator.w3.org.</li>
-                        <li><strong>Проверка скорости загрузки</strong>. С помощью инструментов GTmetrix и PageSpeed Insights можно проверить скорость загрузки
+                        <li><strong>Проверка скорости загрузки</strong>. С помощью инструментов GTmetrix и PageSpeed
+                            Insights можно проверить скорость загрузки
                             страницы и&nbsp; ее повысить. Это поможет “облегчить” страницу и ускорит ее индексацию
                             поисковыми системами.</li>
                         <li><strong>Проверка наличия аналогичных шрифтов для Windows, Mac и Linux</strong>. Когда
@@ -345,28 +350,31 @@
                             Обновлено: <span itemprop="dateCreated">22.12.2020</span>
                         </span>
                     </p>
-            </div>
-            <div class="chapter">
-                <h3>Разделы</h3>
-                <hr id="line">
-                <h4>Начало</h4>
-                <a href="#1">1. Что включает верстка сайта?</a><br>
-                <a href="#2">2. Виды версток сайтов</a><br>
-                <a href="#2">2. Инструменты</a><br>
-                <a href="#2">2. Сложности</a><br>
-                <a href="#2">2. Тестирование</a><br>
-                <br>
-            </div>
-        </div>
-    </main>
-    <hr>
-    <footer>
-        <h1 class="PS">
-            Напоминаем: <br>
-            Данный сайт создан как проектная работа, так что возможны некоторые недоработки, в случае <br>
-            таковых вы всегда можете связаться с нами через чат сайта или же написать на Gmail.
-        </h1>
-    </footer>
+                </div>
+            </section>
+            <aside class="flex-item item-5">
+                <div class="chapter">
+                    <h3>Разделы</h3>
+                    <hr id="line">
+                    <h4>Начало</h4>
+                    <a href="#1">1. Что включает верстка сайта?</a><br>
+                    <a href="#2">2. Виды версток сайтов</a><br>
+                    <a href="#2">2. Инструменты</a><br>
+                    <a href="#2">2. Сложности</a><br>
+                    <a href="#2">2. Тестирование</a><br>
+                    <br>
+                </div>
+            </aside>
+        </main>
+        <hr>
+        <footer class="flex-item item-6">
+            <h1 class="PS">
+                Напоминаем: <br>
+                Данный сайт создан как проектная работа, так что возможны некоторые недоработки, в случае <br>
+                таковых вы всегда можете связаться с нами через чат сайта или же написать на Gmail.
+            </h1>
+        </footer>
+    </div>
 </body>
 
 </html>
