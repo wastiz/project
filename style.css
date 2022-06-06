@@ -230,3 +230,31 @@ h3{
     font-family: raleway;
     font-size: 15px;
 }
+.noaccount{
+    font-size: 15px;
+    text-decoration: none;
+
+}
+.noaccount:hover{
+    color: lightblue;
+}
+.logbutton{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #4EE3A5;
+    border: 0px solid white;
+    color: white;
+    font-size: 15px;
+    font-family: Raleway;
+}
+.logbutton:hover{
+    color: black;
+}
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
