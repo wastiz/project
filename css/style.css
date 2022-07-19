@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --color1: #0D095C;
+    --color2: #FF9643;
+}
+
+.body {
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    min-width: 100%;
+    height: 100px;
+    gap: 7%;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 100px;
+}
+
+.logo {
+    font-size: 64px;
+    font-weight: bold;
+    color: var(--color1);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color1);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--color2);
+}
+
+.orange-button {
+    width: 206px;
+    height: 67px;
+    background-color: var(--color2);
+    border-radius: 10px;
+    font-size: 24px;
+    border: 0;
+    color: white;
+    font-weight: bold;
+}
+
+nav button:hover {
+    color: var(--color1);
+}
+
+header {
+    padding: 70px 100px;
+}
+
+.greetings {
+    font-size: 24px;
+    color: var(--color1);
+    font-weight: 700;
+}
+
+.description {
+    font-size: 18px;
+    color: var(--color1);
+    font-weight: 700;
+}
+
+header h1 {
+    font-size: 70px;
+    color: var(--color1);
+    font-weight: bold;
+}
+
+.orange-circle {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #FFD052;
+    opacity: 0.7;
+    border-radius: 50%; 
+    margin-left: 30%;
+}
+
+.purple-circle {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    background: #0D095C;
+    opacity: 0.7;
+    border-radius: 50%;
+    left: 50%;
+}
+ul {
+    position: relative;
+    display: flex;
+}
+ul li {
+    position: relative;
+    list-style: none;
+    margin: 0 30px;
+    cursor: pointer;
+}
+ul li a {
+    text-decoration: none;
+}
+ul li a .fa-brands {
+    margin-top: 17px;
+    font-size: 3em;
+    color: #222;
+}
+ul li a::before {
+    font-family: "FontAwesome";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 3em;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+ul li:nth-child(1) a::before {
+    content: "\f16d";
+    background-image: linear-gradient(45deg, 
+      #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,
+      #bc1888 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 4px solid #dc2743;
+}
+ul li:nth-child(2) a::before {
+    content: "\f232";
+    color: #25D366;
+    border-bottom: 4px solid #25D366;
+}
+ul li:nth-child(3) a::before {
+    content: "\f099";
+    color: #1DA1F2;
+    border-bottom: 4px solid #1DA1F2;
+}
+ul li:hover a::before {
+    height: 100%;
+}
+.counter-section {
+    background-color: var(--color2);
+    border-radius: 2em;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+    margin: 5%;
+    height: auto;
+}
+.counter-container{
+    align-items: center;
+    justify-content: center;
+    gap: 5%
+}
+.counter-item{
+    display: flex;
+    flex-direction: column;
+}
+.counter-item h2 {
+    color: white;
+    font-weight: 1000;
+    font-size: 45px;
+}
+.counter-item h4 {
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+}
+.popular-category-h2{
+    padding: 50px 0;
+    font-size: 44px;
+    font-weight: bold;
+    color: var(--color1);
+}
+.popular-category-item{
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.popular-category-item img{
+    width: 80px;
+    height: 80px;
+}
+.popular-category-item h2 {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--color1);
+}
+.popular-category-item p {
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+}
+.about-me-text h2{
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--color1);
+}
+.about-me-text p {
+    color: #4D4A84;
+    font-size: 25px;
+    font-weight: medium;
+}
+.about-me-img img{
+    width: 492px;
+    height: 482px;
+}
+.subscribe-container{
+    background-color: var(--color2);
+    padding: 3% 0;
+}
+.subscribe-container h2 {
+    color: white;
+    font-weight: bold;
+}
+.subscribe-form{
+    width: 30%;
+}
+.my-articles {
+    padding: 5% 0;
+}
+.my-articles h2 {
+    font-size: 44px;
+    font-weight: bold;
+    color: var(--color1);
+}
+.my-articles a {
+    text-decoration: none;
+    font-size: 24px;
+    color: var(--color1);
+}
+.my-articles a:active{
+    color: var(--color2);
+}
+.article-card-img{
+    width: 350px;
+    height: 232px;
+    border-radius: 15px;
+}
+.article-card-title{
+    font-size: 24px;
+    color: black;
+    font-weight: 600;
+}
+.article-card-descr{
+    font-size: 18px;
+    font-weight: light; 
+    color: gray;
+}
+

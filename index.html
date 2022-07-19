@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -15,87 +17,174 @@
 </head>
 
 <body>
-    <div class="flex-container">
-        <header class="flex-item item-1">
-            <a class="logo" href="">SCH</a>
-            <nav>
-                <a href="index.html">Главная</a>
-                <a href="helpRu.html">Поддержка</a>
-                <a href="articleRu.html">Статьи</a>
-                <a href="aboutusRu.html">Онас</a>
-                <a href="indexEng.html">En</a>
-                <a href="index.html">Ru</a>
-            </nav>
-            <div class="reg_div">
-                <a class="sign_a" href="login.html">
-                    <div class="sign_div">Войти</div>
-                </a>
-                <a class="login_a" href="">
-                    <div class="login_div">Создать</div>
-                </a>
+    <nav>
+        <h1 class="logo">SCH</h1>
+        <a href="">Home</a>
+        <a href="">About me</a>
+        <a href="">Gallery</a>
+        <a href="">Contact us</a>
+        <button class="orange-button">Login here</button>
+    </nav>
+    <header>
+        <h5 class="greetings">Hello!</h5>
+        <br>
+        <h1>This website is for <br> developers!</h1>
+        <br>
+        <h5 class="description">
+            Here you can read articles about web development and <br>
+            how to start your journey in this environment. Also, see my <br>
+            journey and my progression. <br>
+        </h5>
+        <br>
+        <div class="purple-circle"></div>
+        <div class="orange-circle"></div>
+        <button class="orange-button">Start here!</button>
+    </header>
+    <section class="counter-section">
+        <div class="container">
+            <div class="row">
+                <div class="counter-item col-xl-3 col-md-3 col-sm-6">
+                    <h2 class="text-center">5+</h2>
+                    <h4 class="text-center">Experience</h4>
+                </div>
+                <div class="counter-item col-xl-3 col-md-3 col-sm-6">
+                    <h2 class="text-center">20+</h2>
+                    <h4 class="text-center">Members</h4>
+                </div>
+                <div class="counter-item col-xl-3 col-md-3 col-sm-6">
+                    <h2 class="text-center">200+</h2>
+                    <h4 class="text-center">Clients</h4>
+                </div>
+                <div class="counter-item col-xl-3 col-md-3 col-sm-6">
+                    <h2 class="text-center">2000+</h2>
+                    <h4 class="text-center">Designs</h4>
+                </div>
             </div>
-        </header>
-        <div class="head">
-            <div class="notion">
-                <h1 class="liner">
-                    Давно хотели начать делать сайты? Не знаете, с чего начать? Тогда этот сайт
-                    специально для вас. В данном портале мы собрали список программ для
-                    начинающих создателей сайтов, более того, прикрепили ссылки на курсы по
-                    этим программам, а так же ссылки на официальные сайты, чтобы вы не
-                    тратили время на поиск.
-                </h1>
-                <hr>
-                <h1 class="PS">
-                    Данный сайт создан как проектная работа, так что возможны некоторые недоработки, в случае
-                    <br>
-                    таковых вы всегда можете связаться с нами через чат сайта или же написать на Gmail.
-                </h1>
-            </div>
-            <img class="head_img" src="img/image1.png" alt="no image">
         </div>
-        <main class="flex-item item-2">
-            <section class="flex-item item-4">
-                <div class="card">
-                    <img src="svg/support.svg" alt="no image" class="svgicon">
-                    <h3>Есть вопросы или хотите написать об ошибке? <br>
-                        Напишите в нашу техподдержку</h3>
-                    <button class="here"><a href="helpRu.html">Вам сюда!</a></button>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-md-12 col-sm-12">
+                    <h2 class="popular-category-h2 text-center">Popular Category</h2>
                 </div>
-                <div class="card">
-                    <img src="svg/start.svg" alt="no image" class="svgicon">
-                    <h3>Хотите создать сайт и не знаете с чего начать? <br>
-                        Прочитайте нашу статью</h3>
-                    <button class="here"><a href="articleRu.html">Вам сюда!</a></button>
+                <div class="row">
+                    <div class="popular-category-item col-xl-3 col-md-3 col-sm-6">
+                        <img src="svg/coding.svg" alt="no icon">
+                        <h2 class="text-center">Web Development</h2>
+                        <p class="text-center">
+                            Don't know how to start web development? <br>
+                            Read article about it!
+                        </p>
+                    </div>
+                    <div class="popular-category-item col-xl-3 col-md-3 col-sm-6">
+                        <img src="svg/analytics-graph-svgrepo-com.svg" alt="no icon"></img>
+                        <h2 class="text-center">Web Development</h2>
+                        <p class="text-center">
+                            Don't know how to start web development? <br>
+                            Read article about it!
+                        </p>
+                    </div>
+                    <div class="popular-category-item col-xl-3 col-md-3 col-sm-6">
+                        <img src="svg/pallete.svg" alt="no icon"></img>
+                        <h2 class="text-center">Web Development</h2>
+                        <p class="text-center">
+                            Don't know how to start web development? <br>
+                            Read article about it!
+                        </p>
+                    </div>
+                    <div class="popular-category-item col-xl-3 col-md-3 col-sm-6">
+                        <img src="svg/message.svg" alt="no icon"></img>
+                        <h2 class="text-center">Web Development</h2>
+                        <p class="text-center">
+                            Don't know how to start web development? <br>
+                            Read article about it!
+                        </p>
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="svg/design.svg" alt="no image" class="svgicon">
-                    <h3>Хотите узнать как делать современный дизайн? <br>
-                        Прочитайте нашу статью</h3>
-                    <button class="here"><a href="designRu.html">Вам сюда!</a></button>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="about-me-text col-xl-6 col-md-6 col-sm-6">
+                    <h2>About me</h2>
+                    <p>
+                        Hi! I’am 18 years old programmer who is <br>
+                        studying in 12th grade right now. I also <br>
+                        study in codesters club (for which many <br>
+                        thanks to them), because on these courses <br>
+                        I decided to develop myself as a programmer <br>
+                        At the moment, I am completing my projects, <br>
+                        which you can see on my github. Also, I’ve <br>
+                        published here a few articles about web <br>
+                        development. Enjoy!
+                    </p>
                 </div>
-                <div class="card">
-                    <img src="svg/coding.svg" alt="no image" class="svgicon">
-                    <h3>Не знаете как сверстать сайт? <br>
-                        Прочитайте нашу статью</h3>
-                    <button class="here"><a href="codingRu.html">Вам сюда!</a></button>
+                <div class="about-me-img col-xl-6 col-md-6 col-sm-6">
+                    <img src="img/image3.svg" alt="no image">
                 </div>
-                <div class="card">
-                    <img src="svg/application.svg" alt="no image" class="svgicon">
-                    <h3>Не знаете какие приложения лучше использовать? <br>
-                        Прочитатйте нашу статью</h3>
-                    <button class="here"><a href="applicationRu.html">Вам сюда!</a></button>
+            </div>
+        </div>
+    </section>
+    <section class="subscribe-container">
+        <div class="container">
+            <div class="row">
+                <div v class="col-xl-12 col-md-12 col-sm-12">
+                    <h2>
+                        Subscribe To My News <br>
+                        Letter!
+                    </h2>
+                    <br>
+                    <div class="subscribe-form input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Email here.." aria-label="Email here..."
+                            aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Subscribe</button>
+                    </div>
                 </div>
-            </section>
-        </main>
-        <hr>
-        <footer class="flex-item item-6">
-            <h1 class="PS">
-                Напоминаем: <br>
-                Данный сайт создан как проектная работа, так что возможны некоторые недоработки, в случае <br>
-                таковых вы всегда можете связаться с нами через чат сайта или же написать на Gmail.
-            </h1>
-        </footer>
-    </div>
+            </div>
+        </div>
+    </section>
+    <section class="my-articles">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-md-12 col-sm-12">
+                    <h2 class="text-center">My articles</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-md-3 col-sm-6">
+                    <h4 class="text-center"><a href="">All</a></h4>
+                </div>
+                <div class="col-xl-3 col-md-3 col-sm-6">
+                    <h4 class="text-center"><a href="">Web-design</a></h4>
+                </div>
+                <div class="col-xl-3 col-md-3 col-sm-6">
+                    <h4 class="text-center"><a href="">Web-coding</a></h4>
+                </div>
+                <div class="col-xl-3 col-md-3 col-sm-6">
+                    <h4 class="text-center"><a href="">Other</a></h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="article-card-container col-xl-4 col-md-6 col-sm-12">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <ul>
+        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+    </ul>
+
+    <footer>
+
+    </footer>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
