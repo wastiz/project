@@ -47,11 +47,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const textSelector = document.querySelector('.text-selector');
 
     window.addEventListener('scroll', function(){
-            if(document.documentElement.scrollTop >= 1000 && document.documentElement.scrollTop <= 1100){
+            if(document.documentElement.scrollTop >= 1000 && document.documentElement.scrollTop <= 1450){
                 textSelector.classList.add('about-me-text-h2');
                 console.log('added');
             } else {
-                console.log('nothing');
+                textSelector.classList.remove('about-me-text-h2');
+                console.log('removed');
             }
     });
 

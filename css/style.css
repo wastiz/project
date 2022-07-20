@@ -317,7 +317,10 @@ ul li:hover a::before {
 /* Footer */
 .site-footer{
     background-color: var(--color2);
-    padding: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: -100px;
+    padding-right: -100px;
 }
 .site-footer h2 {
     font-size: 50px;
@@ -329,3 +332,46 @@ ul li:hover a::before {
     font-weight: medium;
     color: white;
 }
+.site-footer h3 {
+    font-size: 25px;
+    font-weight: 500;
+    color: white;
+}
+.site-footer h6 {
+    font-size: 20px;
+    font-weight: 200;
+    color: white;
+}
+.site-footer h6 a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 200;
+    color: white;
+}
+.site-footer h6 a:hover {
+    color: black;
+}
+.site-footer hr {
+    color: #C4C4C4;
+    border: 1px solid #C4C4C4;
+    border-radius: 1px;
+    opacity: 80%
+}
+.search {
+    width: 300px; /* Ширина поля с кнопкой */
+    border: 1px solid #000; /* Параметры рамки */
+    min-height: 20px; /* Минимальная высота */
+   }
+   input[type="search"] {
+    border: none; /* Убираем рамку */
+    outline: none; /* Убираем свечение в Chrome и Safari */
+    -webkit-appearance: none; /* Убираем рамку в Chrome и Safari */
+    width: 274px; /* Ширина поля */
+    vertical-align: middle; /* Выравнивание по середине */
+   }
+   input[type="submit"] {
+    width: 20px; /* Ширина кнопки */
+    height: 20px; /* Высота кнопки */
+    border: none; /* Убираем рамку */
+    background: url(images/video.png) no-repeat 50% 50%; /* Параметры фона */
+   }
