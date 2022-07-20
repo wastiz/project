@@ -42,4 +42,17 @@ document.addEventListener('DOMContentLoaded', function () {
         '.article-card-container'
     ).render();
 
+    //Scroll effects
+
+    const textSelector = document.querySelector('.text-selector');
+
+    window.addEventListener('scroll', function(){
+            if(document.documentElement.scrollTop >= 1000 && document.documentElement.scrollTop <= 1100){
+                textSelector.classList.add('about-me-text-h2');
+                console.log('added');
+            } else {
+                console.log('nothing');
+            }
+    });
+
 });

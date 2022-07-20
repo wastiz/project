@@ -42,13 +42,15 @@ a:hover {
     width: 206px;
     height: 67px;
     background-color: var(--color2);
-    border-radius: 10px;
+    border-radius: 40px;
     font-size: 24px;
     border: 0;
     color: white;
     font-weight: bold;
 }
-
+.orange-button:hover {
+    color: black;
+}
 nav button:hover {
     color: var(--color1);
 }
@@ -94,57 +96,7 @@ header h1 {
     border-radius: 50%;
     left: 50%;
 }
-ul {
-    position: relative;
-    display: flex;
-}
-ul li {
-    position: relative;
-    list-style: none;
-    margin: 0 30px;
-    cursor: pointer;
-}
-ul li a {
-    text-decoration: none;
-}
-ul li a .fa-brands {
-    margin-top: 17px;
-    font-size: 3em;
-    color: #222;
-}
-ul li a::before {
-    font-family: "FontAwesome";
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 3em;
-    height: 0;
-    overflow: hidden;
-    transition: 0.5s ease-in-out;
-}
 
-ul li:nth-child(1) a::before {
-    content: "\f16d";
-    background-image: linear-gradient(45deg, 
-      #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,
-      #bc1888 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    border-bottom: 4px solid #dc2743;
-}
-ul li:nth-child(2) a::before {
-    content: "\f232";
-    color: #25D366;
-    border-bottom: 4px solid #25D366;
-}
-ul li:nth-child(3) a::before {
-    content: "\f099";
-    color: #1DA1F2;
-    border-bottom: 4px solid #1DA1F2;
-}
-ul li:hover a::before {
-    height: 100%;
-}
 .counter-section {
     background-color: var(--color2);
     border-radius: 2em;
@@ -243,6 +195,9 @@ ul li:hover a::before {
 .my-articles a:active{
     color: var(--color2);
 }
+.my-articles a:hover{
+    color: var(--color2);
+}
 .article-card-img{
     width: 350px;
     height: 232px;
@@ -259,3 +214,118 @@ ul li:hover a::before {
     color: gray;
 }
 
+/* scroll effect classes */
+
+.text-selector::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+  
+  .about-me-text-h2::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  .text-selector::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: var(--color2);
+    opacity: 70%;
+    width: 37%;
+    z-index: -1;
+    transition: transform .5s ease;
+  }
+
+  .about-me-text-h2::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  .text-selector {
+    position: relative;
+    font-size: 5rem;
+  }
+
+/* Social media links */
+
+.social-media-links h2 {
+    font-size: 44px;
+    font-weight: bold;
+    color: var(--color1);
+}
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul {
+    position: relative;
+    display: flex;
+}
+ul li {
+    position: relative;
+    list-style: none;
+    margin: 0 30px;
+    cursor: pointer;
+}
+ul li a {
+    text-decoration: none;
+}
+ul li a .fa-brands {
+    margin-top: 17px;
+    font-size: 3em;
+    color: #222;
+}
+ul li a::before {
+    font-family: "FontAwesome";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 2.99em;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+
+ul li:nth-child(1) a::before {
+    content: "\f16d";
+    background-image: linear-gradient(45deg, 
+      #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,
+      #bc1888 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 4px solid #dc2743;
+}
+ul li:nth-child(2) a::before {
+    content: "\f09b";
+    color: gray;
+    border-bottom: 4px solid gray;
+}
+ul li:nth-child(3) a::before {
+    content: "\f08c";
+    color: blue;
+    border-bottom: 4px solid blue;
+}
+ul li:hover a::before {
+    height: 100%;
+}
+
+/* Footer */
+.site-footer{
+    background-color: var(--color2);
+    padding: 50px;
+}
+.site-footer h2 {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+}
+.site-footer h5 {
+    font-size: 25px;
+    font-weight: medium;
+    color: white;
+}
