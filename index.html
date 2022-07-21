@@ -18,12 +18,19 @@
 
 <body>
     <nav>
-        <h1 class="logo">SCH</h1>
-        <a href="">Home</a>
-        <a href="">About me</a>
-        <a href="">Gallery</a>
-        <a href="">Contact us</a>
-        <button class="orange-button">Login here</button>
+        <ul>
+            <li>
+                <h1 class="logo">SCH</h1>
+            </li>
+            <li><a href="">Home</a></li>
+            <li><a href="">About me</a></li>
+            <li class="modal-div">
+                <a class="modal-gallery">Gallery</a>
+                <div class="hover-modal closed-modal"></div>
+            </li>
+            <li><a href="">Contact us</a></li>
+            <li><button class="orange-button">Login here</button></li>
+        </ul>
     </nav>
     <header>
         <h5 class="greetings">Hello!</h5>
@@ -38,7 +45,10 @@
         <br>
         <div class="purple-circle"></div>
         <div class="orange-circle"></div>
-        <button class="orange-button">Start here!</button>
+        <a href="#">
+            <span>Start!</span>
+            <div class="liquid"></div>
+        </a>
     </header>
     <section class="counter-section">
         <div class="container">
@@ -105,7 +115,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section class="about-me">
         <div class="container">
             <div class="row">
                 <div class="about-me-text col-xl-6 col-md-6 col-sm-6">
@@ -153,7 +163,7 @@
                     <h2 class="text-center">My articles</h2>
                 </div>
             </div>
-            <div class="row">
+            <div class="article-sections row">
                 <div class="col-xl-3 col-md-3 col-sm-6">
                     <h4 class="text-center"><a href="">All</a></h4>
                 </div>
@@ -167,14 +177,21 @@
                     <h4 class="text-center"><a href="">Other</a></h4>
                 </div>
             </div>
-            <div class="row">
-                <div class="article-card-container col-xl-4 col-md-6 col-sm-12">
+            <div class="row selector overflow-hidden">
+                <div class="article-card-column-1 col-xl-4 col-md-6 col-sm-12">
+                    <!-- here I post my article cards by js -->
+                </div>
+                <div class="article-card-column-2 col-xl-4 col-md-6 col-sm-12">
+                    <!-- here I post my article cards by js -->
+                </div>
+                <div class="article-card-column-3 col-xl-4 col-md-6 col-sm-12">
                     <!-- here I post my article cards by js -->
                 </div>
             </div>
             <div class="row">
                 <div class="col-xl-12 col-md-12 col-sm-12">
-                    <button class="position-relative top-100 start-50 translate-middle orange-button">View All</button>
+                    <button class="view-all position-relative top-100 start-50 translate-middle orange-button">View
+                        All</button>
                 </div>
             </div>
         </div>
@@ -187,9 +204,9 @@
             <br>
             <div class="flex-center">
                 <ul>
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li .class="social-media-li"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li .class="social-media-li"><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                    <li .class="social-media-li"><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -222,10 +239,12 @@
                     <h3>Stay Connected!</h3>
                     <form class="foter-form">
                         <div class="search">
-                         <input type="search" name="q">
-                         <input type="submit" value="">
-                       </div>
-                      </form>
+                            <input class="form-input" type="text" name="q" placeholder="Email here...">
+                            <div class="form-circle">
+                                <div class="form-triangle"><input type="submit" value="" class=""></div>
+                            </div>
+                        </div>
+                    </form>
                     <h6><i class="fa-solid fa-phone"></i>+372 55612075</h6>
                     <h6><i class="fa-solid fa-envelope"></i>valnos04@gmail.com</h6>
                 </div>

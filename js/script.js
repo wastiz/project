@@ -2,6 +2,22 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
+    //Header Modal
+
+    const gallery = document.querySelector('.modal-gallery');
+    const hoverModal = document.querySelector('.hover-modal');
+
+    gallery.addEventListener('click', function () {
+        if (hoverModal.classList.contains('closed-modal')) {
+            hoverModal.classList.remove('closed-modal');
+            hoverModal.classList.add('opened-modal');
+        } else {
+            hoverModal.classList.remove('opened-modal');
+            hoverModal.classList.add('closed-modal');
+        }
+    });
+
+
     //Articles 
 
     class ArticleCard {
@@ -24,36 +40,155 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             element.innerHTML = `
+                <div class='article-card-item'>
                 <img class='article-card-img' src=${this.src} alt=${this.alt}>
                 <h3 class="article-card-title">${this.title}</h3>
                 <div class="article-card-descr">${this.descr}</div>
+                </div>
                 `;
             this.parent.append(element);
         }
-
-
-
     }
+
+    let a = 0;
+
+    function oneToThree() {
+        if (a == 0) {
+            a++;
+            return a;
+        } else if (a == 1) {
+            a++;
+            return a;
+        } else if (a == 2) {
+            a++;
+            return a;
+        } else if (a == 3) {
+            a = 0;
+            a++;
+            return a;
+        }
+    }
+
     new ArticleCard(
         'svg/article-test.svg',
         'no image',
         "Let's Start",
         'Here you will learn how to start your <br> way in this suffering deal',
-        '.article-card-container'
+        `.article-card-column-${oneToThree()}`
+    ).render();
+
+    new ArticleCard(
+        'svg/article-test.svg',
+        'no image',
+        "Let's Start",
+        'Here you will learn how to start your <br> way in this suffering deal',
+        `.article-card-column-${oneToThree()}`
+    ).render();
+
+    new ArticleCard(
+        'svg/article-test.svg',
+        'no image',
+        "Let's Start",
+        'Here you will learn how to start your <br> way in this suffering deal',
+        `.article-card-column-${oneToThree()}`
+    ).render();
+
+    new ArticleCard(
+        'svg/article-test.svg',
+        'no image',
+        "Let's Start",
+        'Here you will learn how to start your <br> way in this suffering deal',
+        `.article-card-column-${oneToThree()}`
+    ).render();
+
+    new ArticleCard(
+        'svg/article-test.svg',
+        'no image',
+        "Let's Start",
+        'Here you will learn how to start your <br> way in this suffering deal',
+        `.article-card-column-${oneToThree()}`
+    ).render();
+
+    new ArticleCard(
+        'svg/article-test.svg',
+        'no image',
+        "Let's Start",
+        'Here you will learn how to start your <br> way in this suffering deal',
+        `.article-card-column-${oneToThree()}`
+    ).render();
+
+    new ArticleCard(
+        'svg/article-test.svg',
+        'no image',
+        "Let's Start",
+        'Here you will learn how to start your <br> way in this suffering deal',
+        `.article-card-column-${oneToThree()}`
+    ).render();
+    new ArticleCard(
+        'svg/article-test.svg',
+        'no image',
+        "Let's Start",
+        'Here you will learn how to start your <br> way in this suffering deal',
+        `.article-card-column-${oneToThree()}`
+    ).render();
+    new ArticleCard(
+        'svg/article-test.svg',
+        'no image',
+        "Let's Start",
+        'Here you will learn how to start your <br> way in this suffering deal',
+        `.article-card-column-${oneToThree()}`
+    ).render();
+    new ArticleCard(
+        'svg/article-test.svg',
+        'no image',
+        "Let's Start",
+        'Here you will learn how to start your <br> way in this suffering deal',
+        `.article-card-column-${oneToThree()}`
+    ).render();
+    new ArticleCard(
+        'svg/article-test.svg',
+        'no image',
+        "Let's Start",
+        'Here you will learn how to start your <br> way in this suffering deal',
+        `.article-card-column-${oneToThree()}`
+    ).render();
+    new ArticleCard(
+        'svg/article-test.svg',
+        'no image',
+        "Let's Start",
+        'Here you will learn how to start your <br> way in this suffering deal',
+        `.article-card-column-${oneToThree()}`
     ).render();
 
     //Scroll effects
 
     const textSelector = document.querySelector('.text-selector');
 
-    window.addEventListener('scroll', function(){
-            if(document.documentElement.scrollTop >= 1000 && document.documentElement.scrollTop <= 1450){
-                textSelector.classList.add('about-me-text-h2');
-                console.log('added');
-            } else {
-                textSelector.classList.remove('about-me-text-h2');
-                console.log('removed');
-            }
+    window.addEventListener('scroll', function () {
+        if (document.documentElement.scrollTop >= 1000 && document.documentElement.scrollTop <= 1500) {
+            textSelector.classList.add('about-me-text-h2');
+            console.log('added');
+        } else {
+            textSelector.classList.remove('about-me-text-h2');
+            console.log('removed');
+        }
     });
+
+    //Overflow function 
+    const overflowItem = document.querySelector('.selector');
+    const viewAllButton = document.querySelector('.view-all');
+
+    viewAllButton.addEventListener('click', () => {
+        if (overflowItem.classList.contains('overflow-hidden')) {
+            overflowItem.classList.remove('overflow-hidden');
+            overflowItem.classList.add('overflow-scroll');
+            viewAllButton.innerText = 'Close all';
+        } else {
+            overflowItem.classList.remove('overflow-scroll');
+            overflowItem.classList.add('overflow-hidden');
+            viewAllButton.innerText = 'View all';
+        }
+    });
+
 
 });
