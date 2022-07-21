@@ -53,7 +53,7 @@ nav ul li {
 }
 .logo {
     font-size: 64px;
-    font-weight: bold;
+    font-weight: 1000;
     color: var(--color1);
 }
 nav a {
@@ -410,25 +410,25 @@ header a {
     justify-content: center;
 }
 
-ul {
+.social-media-ul {
     position: relative;
     display: flex;
 }
-ul .social-media-li {
+.social-media-li {
     position: relative;
     list-style: none;
     margin: 0 30px;
     cursor: pointer;
 }
-ul .social-media-li a {
+.social-media-li a {
     text-decoration: none;
 }
-ul .social-media-li a .fa-brands {
+.social-media-li a .fa-brands {
     font-size: 3em;
     color: #222;
-    margin-top: 20px;
+    margin-top: 11px;
 }
-ul .social-media-li a::before {
+.social-media-li a::before {
     font-family: "FontAwesome";
     position: absolute;
     top: 0;
@@ -441,7 +441,7 @@ ul .social-media-li a::before {
     transition: 0.5s ease-in-out;
 }
 
-ul .social-media-li:nth-child(1) a::before {
+.social-media-li:nth-child(1) a::before {
     content: "\f16d";
     background-image: linear-gradient(45deg, 
       #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,
@@ -450,17 +450,17 @@ ul .social-media-li:nth-child(1) a::before {
      -webkit-text-fill-color: transparent;
     border-bottom: 4px solid #dc2743;
 }
-ul .social-media-li:nth-child(2) a::before {
+.social-media-li:nth-child(2) a::before {
     content: "\f09b";
     color: gray;
     border-bottom: 4px solid gray;
 }
-ul .social-media-li:nth-child(3) a::before {
+.social-media-li:nth-child(3) a::before {
     content: "\f08c";
     color: blue;
     border-bottom: 4px solid blue;
 }
-ul .social-media-li:hover a::before {
+.social-media-li:hover a::before {
     height: 112%;
 }
 
