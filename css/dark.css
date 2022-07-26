@@ -10,6 +10,7 @@ body {
 }
 #theme-button{
     cursor: pointer;
+    color: white;
 }
 #theme-button:hover{
     color: blue;
