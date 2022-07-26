@@ -17,6 +17,43 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    //Dark theme
+
+    const btn = document.getElementById("theme-button");
+    const link = document.getElementById("theme-link");
+    let lightTheme = "css/light.css";
+    let darkTheme = "css/dark.css";
+    var currTheme = link.getAttribute("href");
+    var theme = "";
+
+    if (localStorage.getItem('theme') === 'dark') {
+        btn.innerHTML = "Come to <br>Light Side";
+        currTheme = darkTheme;
+        theme = "dark";
+        link.setAttribute("href", currTheme);
+    }
+
+    btn.addEventListener("click", function () {
+        ChangeTheme();
+    });
+
+    function ChangeTheme() {
+
+        if (localStorage.getItem('theme') === 'light') {
+            localStorage.setItem('theme', 'dark');
+            btn.innerHTML = "Come to <br>Light Side";
+            currTheme = darkTheme;
+            theme = "dark";
+            link.setAttribute("href", currTheme);
+        } else {
+            localStorage.setItem('theme', 'light');
+            btn.innerHTML = "Come to <br>Dark Side";
+            currTheme = lightTheme;
+            theme = "light";
+            link.setAttribute("href", currTheme);
+        }
+
+    }
 
     //Articles 
 
@@ -165,12 +202,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const textSelector = document.querySelector('.text-selector');
 
     window.addEventListener('scroll', function () {
-        if (document.documentElement.scrollTop >= 1000 && document.documentElement.scrollTop <= 1500) {
+        if (document.documentElement.scrollTop >= 1000 && document.documentElement.scrollTop <= 1600) {
             textSelector.classList.add('about-me-text-h2');
-            console.log('added');
         } else {
             textSelector.classList.remove('about-me-text-h2');
-            console.log('removed');
         }
     });
 
