@@ -500,6 +500,9 @@ header a {
     border-radius: 1px;
     opacity: 80%
 }
+.stay-connected-column h6{
+    margin-top: 5px;
+}
 .form-circle {
     background-color: var(--color1);
     width: 50px;
@@ -536,12 +539,13 @@ header a {
     vertical-align: middle; /* Выравнивание по середине */
     height: 63px;
     border-radius: 55px;
+    padding: 0px 20px;
    }
    .form-input::placeholder {
     font-size: 20px;
     font-weight: 400;
     color: #8A8686;
-    padding-right: 20px;
+    transform: translateY(1px);
    }
    input[type="submit"] {
     display: none;
