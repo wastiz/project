@@ -1,6 +1,8 @@
 'use strict';
+import 'jquery';
 
 document.addEventListener('DOMContentLoaded', function () {
+
 
     //Header Modal
 
@@ -145,14 +147,25 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // new Article(
-    //     'Little story about progrmming',
-    //     '../svg/article-test.svg',
-    //     'no image',
-    //     '5 minutes to read',
-    //     'Right know im thinking how place article here by js',
-    //     '.article-placeholder'
-    // ).renderArticle();  
+    var test;
+    $.ajax({
+    url: "test.txt",
+    dataType: "text",
+    async: true,
+    success: function(msg){
+        test = msg;
+        alert('Содержимое файла: '+test);
+    }
+    }   );
+
+    new Article(
+        'Little story about progrmming',
+        '../svg/article-test.svg',
+        'no image',
+        '5 minutes to read',
+        'Right know im thinking how place article here by js',
+        '.article-placeholder'
+    ).renderArticle();  
 
 
     let a = 0;
