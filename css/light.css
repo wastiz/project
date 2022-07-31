@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --color1: #0D095C;
+    --color2: #FF9643;
+}
+
+body {
+    background-color: white;
+}
+#theme-button{
+    cursor: pointer;
+    color: var(--color1);
+}
+#theme-button:hover{
+    color: blue;
+}
+h1, h2, h3, h4, h5, h6, p, a {
+    color: var(--color1);
+}

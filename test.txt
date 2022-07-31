@@ -1,0 +1,24 @@
+<p>Yo. I see you want to try your hand at programming? Or become a team leader in some cool company?
+Bill Gates invited you to work and you urgently need to learn how to program in 3 days? Or just listen
+to my cautionary tale? In any case, you are at the right place (more precisely, at that link)!</p>
+<p>Today, everyone roughly knows what these nerds are doing in front of computers called programmers.
+But imagining and trying are two different things. In general, I myself became interested in this when
+I went to some school courses in programming. And no, we did not learn to use Excel there or solve problems in Pascal.
+We immediately plunged into web programming. Almost from the first lessons, we have already started writing html codes
+in codepen. Hmm, I remember how all my classmates at the beginning rejoiced at these courses. By the way, they were in
+English, which in turn also influenced the future.</p>
+<p>So, our courses were 5 hours a week and lasted 3 years. The end result was to make a finished product in these three years.
+For this we had two teachers. One was responsible for our product, idea, design and marketing, and so on, and the second
+was responsible for purely coding. In the beginning, of course, we had more lessons with the first teacher, but then the
+moment came when we could not meet with him for several months (such a curriculum, because). Of course, the rest of the
+time we were coding. At first everything was simple and interesting. We went through the basics of html, css, two months
+after the start we already touched on js. Everyone has already tried to somehow make their product on the knowledge that is.
+Of course, we also solved tasks and other tasks on js. In general, it was not life but a fairy tale. And, by the way, everything
+was great in my life.
+But then something went wrong. The problem is that I don't know what's wrong. And most importantly, the problem is not in
+the courses. Although it just might be in them, because by the end of the first year, frameworks had already begun to be
+shoved into our empty heads. Yes! We have just dealt with the most basic foundations of languages, and already give the
+most complex frameworks. I remind you that the courses were mainly in English (our coding teacher, if necessary, translated into Russian incomprehensible). And then even I, the most charged person for at least tens of thousands of lines of code, began to get lost and not understand the topic. That's how strong the course was.
+Everything got harder and harder. Even the best guys from the course had a hard time with topics. Everyone copies each other's work for change, someone even pays money so that a classmate does the work for him. In general, by the end of the year, and even the second year, that I, that the majority, hand over somehow written prototypes with the minimum required functionality. And the problem is that the teachers are excellent, the program is difficult, but unbearable, and as a result, almost half of my classmates left this course and now remember these codes as the most hated occupation in their lives.
+So that's why I told this story. Programming is not easy, folks. And if you think that programmers will have the same fate as electricians, then you are partly right, but mostly not. I am not saying that someone is not given programming or who cannot comprehend it. I mean, you need to approach this matter as responsibly as possible, otherwise you will also abandon this matter like my classmates.
+I give advice. If you are interested in programming (it doesn’t matter what kind of web, even game development or other area), then for a start, just try yourself in this. Just look on YouTube for any video on html and css, where you will be shown the main tags and properties. Write your first landing page (it is possible without js), even here you will run into problems. And when you decide that your landing is ready, remember your emotions. If after that you are ready to create a Facebook competitor, then you should read the following article.))) Good luck fighter and may the force be with you.</p>

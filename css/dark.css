@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --color1: #0D095C;
+    --color2: #FF9643;
+}
+
+body {
+    background-color: black;
+}
+#theme-button{
+    cursor: pointer;
+    color: white;
+}
+#theme-button:hover{
+    color: blue;
+}
+h1, h2, h3, h4, h5, h6, p, a {
+    color: white;
+}
+nav ul {
+    box-shadow: 12px 9px 50px 0 rgba(255, 255, 255, 1);
+}
+.article-card-title{
+    color: white;
+}
+.about-me-text p {
+    color: white;
+}
+.popular-category-item h2{
+    color: black;
+}
+.popular-category-item p {
+    color: black;
+}
+.popular-category-item{
+    background-color: white;
+    border-radius: 50%;
+}
+.site-footer{
+    box-shadow: 12px -9px 50px 0 rgba(255,255,255,1);
+}
