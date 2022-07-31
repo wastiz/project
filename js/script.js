@@ -1,4 +1,8 @@
 'use strict';
+<<<<<<< HEAD
+=======
+import 'jquery';
+>>>>>>> 86092633d174ccf814c2d8c84e299c908ccf7386
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -88,6 +92,88 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+<<<<<<< HEAD
+=======
+
+    class Article {
+        constructor(src, alt, title, time, article, parentSelector, ...classes) {
+            this.title = title;
+            this.src = src;
+            this.alt = alt;
+            this.time = time;
+            this.article = article;
+            this.parent = document.querySelector(parentSelector);
+            this.classes = classes;
+        }
+        renderArticle() {
+            const element = document.createElement('div');
+            element.classList.add('container');
+
+            if (this.classes.length === 0) {
+                this.classes = "container";
+                element.classList.add(this.classes);
+            } else {
+                this.classes.forEach(className => element.classList.add(className));
+            }
+
+            element.innerHTML = `
+            <div class="row">
+                <h2 class="text-center">${this.title}</h2>
+            </div>
+            <div class="row">
+                <img src="${this.src}" alt="${this.alt}">
+                <h4><i class="fa-solid fa-clock"></i> ${this.time}</h4>
+            </div>
+            <div class="row">
+                <div class="col-xl-7 col-md-7 col-sm-10 col-xs-10">
+                    <p>${this.article}</p>
+                </div>
+                <div class="col-xl-3 col-md-7 col-sm-10 col-xs-10">
+                    <div class="chapters">
+                        <h4>Chapters</h4>
+                        <hr>
+                        <a href="">This is a little story, so there is no chapters</a>
+                    </div>
+                    <div class="stay-connected-form">
+                        <h3>Stay Connected!</h3>
+                        <form class="footer-form">
+                            <div class="search">
+                                <input class="form-input" type="text" name="q" placeholder="Email here...">
+                                <div class="form-circle">
+                                    <div class="form-triangle"><input type="submit" value="" class=""></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            `;
+            this.parent.append(element);
+        }
+    }
+
+    var test;
+    $.ajax({
+    url: "test.txt",
+    dataType: "text",
+    async: true,
+    success: function(msg){
+        test = msg;
+        alert('Содержимое файла: '+test);
+    }
+    }   );
+
+    new Article(
+        'Little story about progrmming',
+        '../svg/article-test.svg',
+        'no image',
+        '5 minutes to read',
+        'Right know im thinking how place article here by js',
+        '.article-placeholder'
+    ).renderArticle();  
+
+
+>>>>>>> 86092633d174ccf814c2d8c84e299c908ccf7386
     let a = 0;
 
     function oneToThree() {

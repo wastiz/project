@@ -553,6 +553,7 @@ header a {
 
 /* Articles */
 
+<<<<<<< HEAD
 .text-placeholder p{
     font-size: 20px;
     padding-right: 20px;
@@ -573,6 +574,8 @@ header a {
     padding-right: 0px;
 }
 
+=======
+>>>>>>> 86092633d174ccf814c2d8c84e299c908ccf7386
 /* chapters block */
 
 .chapters{
