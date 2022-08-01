@@ -292,7 +292,59 @@ header a {
     width: 30%;
 }
 
-/* Articles */
+/* Article-card section */
+  
+.article-card-li {
+    display: inline-block;
+    padding: 10px 40px 10px 0;
+    cursor: pointer;
+    list-style-type: none;
+    color: white;
+    font-size: 20px;
+}
+.article-card-li:hover{
+    color: var(--color2);
+}
+.box {
+    border-radius: 4px;
+    box-shadow: 0px 0px 28px 0 rgba(255, 255, 255, 0.7);
+    min-height: auto;
+    min-width: calc(33% - 28px);
+    max-height: auto;
+    max-width: calc(33% - 28px);
+    padding: 0 10px;
+    margin: 15px;
+    border-width: 3px;
+    float: left;
+}
+  
+.box.web-design{
+    border: 3px solid #e74c3c;
+}
+.box.web-coding{
+    border: 3px solid #8e44ad;
+}
+.box.other{
+    border: 3px solid #2ecc71;
+}
+.hide {
+    opacity: 1;
+    animation-name: a1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+  
+@keyframes a1{
+    to {
+        opacity: 0;
+        min-height: 0; 
+        min-width: 0;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        display: none;
+    } 
+}
 
 .my-articles {
     padding: 5% 0;
@@ -301,15 +353,19 @@ header a {
     font-size: 44px;
     font-weight: bold;
 }
-.my-articles a {
-    text-decoration: none;
-    font-size: 24px;
-}
-.my-articles a:active{
-    color: var(--color2);
-}
-.my-articles a:hover{
-    color: var(--color2);
+.article-card-section ul {
+    display: flex;
+    flex-direction: row;
+    min-width: 100%;
+    height: 100px;
+    gap: 15%;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 100px;
+    width: 100%;
+    box-shadow: 12px 9px 50px 0 rgba(0,0,0,.05);
+    z-index: 999;
+    transition: background-color .3s ease,top .3s ease;
 }
 .article-sections{
     padding: 50px 0px;
@@ -318,8 +374,8 @@ header a {
     padding: 2% 0%;
 }
 .article-card-img{
-    width: 350px;
-    height: 232px;
+    width: auto;
+    height: 200px;
     border-radius: 15px;
 }
 .article-card-title{
@@ -350,6 +406,24 @@ header a {
 .overflow-hidden{
     max-height: 720px;
 }
+
+.hide {
+    opacity: 1;
+    animation-name: a1;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+  
+  /* @keyframes a1{
+    to {
+          opacity: 0;
+          min-height: 0; 
+          min-width: 0;
+          padding: 0;
+          margin: 0;
+          border: 0;
+    } 
+  } */
 
 /* scroll effect classes */
 
@@ -553,7 +627,6 @@ header a {
 
 /* Articles */
 
-<<<<<<< HEAD
 .text-placeholder p{
     font-size: 20px;
     padding-right: 20px;
@@ -574,8 +647,6 @@ header a {
     padding-right: 0px;
 }
 
-=======
->>>>>>> 86092633d174ccf814c2d8c84e299c908ccf7386
 /* chapters block */
 
 .chapters{

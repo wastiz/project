@@ -1,8 +1,4 @@
 'use strict';
-<<<<<<< HEAD
-=======
-import 'jquery';
->>>>>>> 86092633d174ccf814c2d8c84e299c908ccf7386
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -12,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const gallery = document.querySelector('.modal-gallery');
     const hoverModal = document.querySelector('.hover-modal');
 
-    gallery.addEventListener('click', function () {
+    gallery.addEventListener('click', function (e) {
         if (hoverModal.classList.contains('closed-modal')) {
             hoverModal.classList.remove('closed-modal');
             hoverModal.classList.add('opened-modal');
@@ -60,10 +56,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     }
 
-    //Articles 
-
+    //Card-Articles 
+    
     class ArticleCard {
-        constructor(src, alt, title, descr, parentSelector, ...classes) {
+        constructor(type, src, alt, title, descr, parentSelector, ...classes) {
+            this.type = type;
             this.src = src;
             this.alt = alt;
             this.title = title;
@@ -75,105 +72,22 @@ document.addEventListener('DOMContentLoaded', function () {
             const element = document.createElement('div');
 
             if (this.classes.length === 0) {
-                this.classes = "article-card-item";
+                this.classes = "box";
                 element.classList.add(this.classes);
+                element.classList.add(`${this.type}`);
             } else {
                 this.classes.forEach(className => element.classList.add(className));
             }
 
             element.innerHTML = `
-                <div class='article-card-item'>
                 <img class='article-card-img' src=${this.src} alt=${this.alt}>
                 <h3 class="article-card-title">${this.title}</h3>
                 <div class="article-card-descr">${this.descr}</div>
-                </div>
                 `;
+
             this.parent.append(element);
         }
     }
-
-<<<<<<< HEAD
-=======
-
-    class Article {
-        constructor(src, alt, title, time, article, parentSelector, ...classes) {
-            this.title = title;
-            this.src = src;
-            this.alt = alt;
-            this.time = time;
-            this.article = article;
-            this.parent = document.querySelector(parentSelector);
-            this.classes = classes;
-        }
-        renderArticle() {
-            const element = document.createElement('div');
-            element.classList.add('container');
-
-            if (this.classes.length === 0) {
-                this.classes = "container";
-                element.classList.add(this.classes);
-            } else {
-                this.classes.forEach(className => element.classList.add(className));
-            }
-
-            element.innerHTML = `
-            <div class="row">
-                <h2 class="text-center">${this.title}</h2>
-            </div>
-            <div class="row">
-                <img src="${this.src}" alt="${this.alt}">
-                <h4><i class="fa-solid fa-clock"></i> ${this.time}</h4>
-            </div>
-            <div class="row">
-                <div class="col-xl-7 col-md-7 col-sm-10 col-xs-10">
-                    <p>${this.article}</p>
-                </div>
-                <div class="col-xl-3 col-md-7 col-sm-10 col-xs-10">
-                    <div class="chapters">
-                        <h4>Chapters</h4>
-                        <hr>
-                        <a href="">This is a little story, so there is no chapters</a>
-                    </div>
-                    <div class="stay-connected-form">
-                        <h3>Stay Connected!</h3>
-                        <form class="footer-form">
-                            <div class="search">
-                                <input class="form-input" type="text" name="q" placeholder="Email here...">
-                                <div class="form-circle">
-                                    <div class="form-triangle"><input type="submit" value="" class=""></div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            `;
-            this.parent.append(element);
-        }
-    }
-
-    var test;
-    $.ajax({
-    url: "test.txt",
-    dataType: "text",
-    async: true,
-    success: function(msg){
-        test = msg;
-        alert('Содержимое файла: '+test);
-    }
-    }   );
-
-    new Article(
-        'Little story about progrmming',
-        '../svg/article-test.svg',
-        'no image',
-        '5 minutes to read',
-        'Right know im thinking how place article here by js',
-        '.article-placeholder'
-    ).renderArticle();  
-
-
->>>>>>> 86092633d174ccf814c2d8c84e299c908ccf7386
     let a = 0;
 
     function oneToThree() {
@@ -193,96 +107,145 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // fetch('db.json')  
+    // .then(response => response.json()) 
+    // .then(json => {
+    //     json.forEach(({type, img, alt, title, descr, price}) => {
+    //         new ArticleCard(type, img, alt, title, descr, price, `.article-card-column-${oneToThree()}`).renderAllCards();
+    //     });
+    // });
+
+
     new ArticleCard(
+        'web-coding',
         'svg/article-test.svg',
         'no image',
-        "Let's Start",
+        "Let's do this",
         'Here you will learn how to start your <br> way in this suffering deal',
-        `.article-card-column-${oneToThree()}`
+        `.article-card-column`
     ).render();
 
     new ArticleCard(
+        'web-coding',
         'svg/article-test.svg',
         'no image',
-        "Let's Start",
+        "Let's roll",
         'Here you will learn how to start your <br> way in this suffering deal',
-        `.article-card-column-${oneToThree()}`
+        `.article-card-column`
     ).render();
 
     new ArticleCard(
+        'web-coding',
         'svg/article-test.svg',
         'no image',
-        "Let's Start",
+        "Let's roll out",
         'Here you will learn how to start your <br> way in this suffering deal',
-        `.article-card-column-${oneToThree()}`
+        `.article-card-column`
     ).render();
 
     new ArticleCard(
+        'web-design',
         'svg/article-test.svg',
         'no image',
-        "Let's Start",
+        "Let's do this",
         'Here you will learn how to start your <br> way in this suffering deal',
-        `.article-card-column-${oneToThree()}`
+        `.article-card-column`
     ).render();
 
     new ArticleCard(
+        'web-design',
         'svg/article-test.svg',
         'no image',
-        "Let's Start",
+        "Let's do this shit",
         'Here you will learn how to start your <br> way in this suffering deal',
-        `.article-card-column-${oneToThree()}`
+        `.article-card-column`
     ).render();
 
     new ArticleCard(
+        'web-coding',
         'svg/article-test.svg',
         'no image',
-        "Let's Start",
+        "Let's fucking go",
         'Here you will learn how to start your <br> way in this suffering deal',
-        `.article-card-column-${oneToThree()}`
+        `.article-card-column`
     ).render();
 
     new ArticleCard(
+        'web-design',
         'svg/article-test.svg',
         'no image',
         "Let's Start",
         'Here you will learn how to start your <br> way in this suffering deal',
-        `.article-card-column-${oneToThree()}`
+        `.article-card-column`
     ).render();
+
     new ArticleCard(
+        'other',
         'svg/article-test.svg',
         'no image',
         "Let's Start",
         'Here you will learn how to start your <br> way in this suffering deal',
-        `.article-card-column-${oneToThree()}`
+        `.article-card-column`
     ).render();
+
     new ArticleCard(
+        'other',
         'svg/article-test.svg',
         'no image',
         "Let's Start",
         'Here you will learn how to start your <br> way in this suffering deal',
-        `.article-card-column-${oneToThree()}`
+        `.article-card-column`
     ).render();
+
     new ArticleCard(
+        'other',
         'svg/article-test.svg',
         'no image',
         "Let's Start",
         'Here you will learn how to start your <br> way in this suffering deal',
-        `.article-card-column-${oneToThree()}`
+        `.article-card-column`
     ).render();
+
     new ArticleCard(
+        'other',
         'svg/article-test.svg',
         'no image',
         "Let's Start",
         'Here you will learn how to start your <br> way in this suffering deal',
-        `.article-card-column-${oneToThree()}`
+        `.article-card-column`
     ).render();
+
     new ArticleCard(
+        'other',
         'svg/article-test.svg',
         'no image',
         "Let's Start",
         'Here you will learn how to start your <br> way in this suffering deal',
-        `.article-card-column-${oneToThree()}`
+        `.article-card-column`
     ).render();
+
+    const filterBox = document.querySelectorAll('.box');
+    const articleCardImg = document.querySelectorAll('.article-card-img');
+    const articleCardTitle = document.querySelector('.article-card-title');
+    const articleCardDescr = document.querySelector('.article-card-descr');
+
+    document.querySelector('.article-card-nav').addEventListener('click', (event) => {
+    
+        if (event.target.tagName !== 'LI'){
+            console.log('not working');
+            return false;
+        }
+        let filterClass = event.target.dataset.f;
+    
+        filterBox.forEach(elem => {
+            elem.classList.remove('hide');
+            if (!elem.classList.contains(filterClass) && filterClass !== 'all') {
+                elem.classList.add('hide');
+            }
+        });
+        
+    
+    });
 
     //Scroll effects
 
