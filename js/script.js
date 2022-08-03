@@ -80,9 +80,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             element.innerHTML = `
-                <img class='article-card-img' src=${this.src} alt=${this.alt}>
-                <h3 class="article-card-title">${this.title}</h3>
-                <div class="article-card-descr">${this.descr}</div>
+                <img class='article-card-img ${this.type}' src='${this.src}' alt=${this.alt}>
+                <h3 class="article-card-title ${this.type}">${this.title}</h3>
+                <div class="article-card-descr ${this.type}">${this.descr}</div>
                 `;
 
             this.parent.append(element);
@@ -115,6 +115,15 @@ document.addEventListener('DOMContentLoaded', function () {
     //     });
     // });
 
+
+    new ArticleCard(
+        'web-coding',
+        'svg/article-test.svg',
+        'no image',
+        "Let's do this",
+        'Here you will learn how to start your <br> way in this suffering deal',
+        `.article-card-column`
+    ).render();
 
     new ArticleCard(
         'web-coding',
@@ -226,8 +235,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const filterBox = document.querySelectorAll('.box');
     const articleCardImg = document.querySelectorAll('.article-card-img');
-    const articleCardTitle = document.querySelector('.article-card-title');
-    const articleCardDescr = document.querySelector('.article-card-descr');
+    const articleCardTitle = document.querySelectorAll('.article-card-title');
+    const articleCardDescr = document.querySelectorAll('.article-card-descr');
 
     document.querySelector('.article-card-nav').addEventListener('click', (event) => {
     
@@ -243,7 +252,24 @@ document.addEventListener('DOMContentLoaded', function () {
                 elem.classList.add('hide');
             }
         });
-        
+        articleCardImg.forEach(elem => {
+            elem.classList.remove('hide-content');
+            if (!elem.classList.contains(filterClass) && filterClass !== 'all') {
+                elem.classList.add('hide-content');
+            }
+        });
+        articleCardTitle.forEach(elem => {
+            elem.classList.remove('hide-content');
+            if (!elem.classList.contains(filterClass) && filterClass !== 'all') {
+                elem.classList.add('hide-content');
+            }
+        });
+        articleCardDescr.forEach(elem => {
+            elem.classList.remove('hide-content');
+            if (!elem.classList.contains(filterClass) && filterClass !== 'all') {
+                elem.classList.add('hide-content');
+            }
+        });
     
     });
 
